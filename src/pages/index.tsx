@@ -1,12 +1,33 @@
 import Image from 'next/image'
-import { Quicksand } from 'next/font/google'
+import Profile from '@/public/profile.jpg'
+import { Quicksand, Permanent_Marker } from 'next/font/google'
 
 const quicksand = Quicksand({ subsets: ['latin'] })
+const permanentMarker = Permanent_Marker({ subsets: ['latin'], weight: "400" })
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="font-mono">Hello World</div>
+    <main className="flex flex-col min-h-screen items-center justify-between p-24">
+      <div className="flex flex-row h-fit w-full items-center justify-evenly">
+        <div className="flex flex-col w-6/12">
+          <div className={`${permanentMarker.className} text-5xl py-6`}>
+            Hi, I'm Li Ying
+          </div>
+          <div className={`${quicksand.className} text-xl py-6`}>
+            A Software Engineer that loves to solve problems and design simple solutions that are delightful to use. I graduated with a Computer Science degree and am currently based in Singapore.
+          </div>
+        </div>
+        {/* Fix justify-self-center? */}
+        <div className="w-4/12 grayscale hover:grayscale-0 hover:rotate-[360deg] transition-all duration-500">
+          <Image
+            style={{ borderRadius: '50%', overflow: 'hidden' }}
+            src={Profile}
+            width={960}
+            height={960}
+            alt="profile picture"
+          />
+        </div>
+      </div>
       <div className={`${quicksand.className}`}>Hello World</div>
       <div>Hello World</div>
     </main>
