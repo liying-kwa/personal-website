@@ -1,17 +1,21 @@
 import Image from 'next/image'
 import Profile from '@/public/profile.jpg'
 import { Quicksand, Permanent_Marker } from 'next/font/google'
+import VaraText from "@/components/VaraText";
 
 const quicksand = Quicksand({ subsets: ['latin'] })
 const permanentMarker = Permanent_Marker({ subsets: ['latin'], weight: "400" })
 
 export default function Home() {
-  return (
+  return (  
     <main className="flex flex-col min-h-screen items-center justify-between p-24">
       <div className="flex flex-row h-fit w-full items-center justify-evenly">
         <div className="flex flex-col w-6/12">
           <div className={`${permanentMarker.className} text-5xl py-6`}>
             Hi, I'm Li Ying
+          </div>
+          <div className="w-full items-center">
+            <VaraText text="Hi, I'm Li Ying" />
           </div>
           <div className={`${quicksand.className} text-xl py-6`}>
             A Software Engineer that loves to solve problems and design simple solutions that are delightful to use. I graduated with a Computer Science degree and am currently based in Singapore.
