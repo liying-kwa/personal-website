@@ -1,23 +1,26 @@
 import Image from 'next/image'
 import Profile from '@/public/profile.jpg'
 import { Quicksand, Permanent_Marker } from 'next/font/google'
-import VaraText from "@/components/VaraText";
+// import VaraText from "@/components/VaraText"
+// import { useTheme } from "next-themes"
 
 const quicksand = Quicksand({ subsets: ['latin'] })
 const permanentMarker = Permanent_Marker({ subsets: ['latin'], weight: "400" })
 
 export default function Home() {
-  return (  
-    <main className="flex flex-col min-h-screen items-center justify-between p-24">
+  // const { theme, setTheme } = useTheme();
+
+  return (
+    <main className="flex flex-col min-h-screen items-center justify-between p-24 bg-white dark:bg-black">
       <div className="flex flex-row h-fit w-full items-center justify-evenly">
         <div className="flex flex-col w-6/12">
-          <div className={`${permanentMarker.className} text-5xl py-6`}>
+          <div className={`${permanentMarker.className} text-5xl py-6 text-black dark:text-white`}>
             Hi, I'm Li Ying
           </div>
-          <div className="w-full items-center">
-            <VaraText text="Hi, I'm Li Ying" />
-          </div>
-          <div className={`${quicksand.className} text-xl py-6`}>
+          {/* <div className="w-full items-center">
+            <VaraText text="Hi, I'm Li Ying" theme={theme!} />
+          </div> */}
+          <div className={`${quicksand.className} text-xl py-6 text-black dark:text-white`}>
             A Software Engineer that loves to solve problems and design simple solutions that are delightful to use. I graduated with a Computer Science degree and am currently based in Singapore.
           </div>
         </div>
@@ -32,8 +35,8 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className={`${quicksand.className}`}>Hello World</div>
-      <div>Hello World</div>
+      <div className={`${quicksand.className} text-black dark:text-white`}>Hello World</div>
+      <div className="text-black dark:text-white">Hello World</div>
     </main>
 
     // <main className="flex min-h-screen flex-col items-center justify-between p-24">
