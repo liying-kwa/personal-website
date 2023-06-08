@@ -25,7 +25,7 @@ export default function Home() {
           </div>
         </div>
         {/* Fix justify-self-center? */}
-        <div className="w-4/12 grayscale hover:grayscale-0 hover:rotate-[360deg] transition-all duration-500">
+        <div className="w-4/12 hover:animate-pulse">
           <Image
             style={{ borderRadius: '50%', overflow: 'hidden' }}
             src={Profile}
