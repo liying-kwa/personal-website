@@ -9,13 +9,13 @@ import { useTheme } from 'next-themes';
 import colors from 'tailwindcss/colors'
 
 // TODO: Choose font
-// const quicksand = Quicksand({ subsets: ['latin'] })
+const quicksand = Quicksand({ subsets: ['latin'] })
 
 const Experience = () => {
     const { theme } = useTheme();
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-gray-100 dark:bg-black text-black dark:text-white">
+        <main className={`${quicksand.className} flex min-h-screen flex-col items-center justify-between p-24 bg-gray-100 dark:bg-black text-black dark:text-white`}>
             <VerticalTimeline>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
@@ -35,7 +35,7 @@ const Experience = () => {
                     className="vertical-timeline-element--education"
                     contentStyle={{ background: theme === 'dark' ? colors.gray[500] : colors.gray[300], color: theme === 'dark' ? colors.gray[200] : colors.gray[600] }}
                     contentArrowStyle={{ borderRight: theme === 'dark' ? colors.black : colors.white }}
-                    date="Jun 2020 - Sep 2020"
+                    date="Jun Sep 2020"
                     iconStyle={{ background: theme === 'dark' ? colors.blue[800] : colors.blue[300], color: colors.white }}
                     icon={<ImBriefcase />}
                 >
@@ -49,8 +49,22 @@ const Experience = () => {
                     className="vertical-timeline-element--education"
                     contentStyle={{ background: theme === 'dark' ? colors.gray[500] : colors.gray[300], color: theme === 'dark' ? colors.gray[200] : colors.gray[600] }}
                     contentArrowStyle={{ borderRight: theme === 'dark' ? colors.black : colors.white }}
+                    date="Jun Aug 2019"
+                    iconStyle={{ background: theme === 'dark' ? colors.blue[800] : colors.blue[300], color: colors.white }}
+                    icon={<GiGraduateCap />}
+                >
+                    <h3 className="vertical-timeline-element-title">Summer Exchange</h3>
+                    <h4 className="vertical-timeline-element-subtitle">University of California (Berkeley)</h4>
+                    <p>
+                        [CS 61BL] Data Structures and Programming Methodology
+                    </p>
+                </VerticalTimelineElement>
+                <VerticalTimelineElement
+                    className="vertical-timeline-element--education"
+                    contentStyle={{ background: theme === 'dark' ? colors.gray[500] : colors.gray[300], color: theme === 'dark' ? colors.gray[200] : colors.gray[600] }}
+                    contentArrowStyle={{ borderRight: theme === 'dark' ? colors.black : colors.white }}
                     date="May 2018 - Sep 2021"
-                    iconStyle={{ background: theme === 'dark' ? colors.rose[700] : colors.rose[400], color: colors.white }}
+                    iconStyle={{ background: theme === 'dark' ? colors.green[600] : colors.green[400], color: colors.white }}
                     icon={<GiGraduateCap />}
                 >
                     <h3 className="vertical-timeline-element-title">Bachelor of Engineering</h3>
@@ -61,7 +75,7 @@ const Experience = () => {
                     </p>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
-                    iconStyle={{ background: theme === 'dark' ? colors.green[600] : colors.green[400], color: colors.white }}
+                    iconStyle={{ background: theme === 'dark' ? colors.rose[700] : colors.rose[400], color: colors.white }}
                     icon={<FaFlag />}
                 />
             </VerticalTimeline>
