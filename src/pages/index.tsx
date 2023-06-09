@@ -11,7 +11,7 @@ export default function Home() {
   // const { theme, setTheme } = useTheme();
 
   return (
-    <main className="flex flex-col min-h-screen items-center justify-between p-24 bg-white dark:bg-black">
+    <main className="flex flex-col min-h-screen items-center justify-between p-24 bg-gray-100 dark:bg-black">
       <div className="flex flex-row h-fit w-full items-center justify-evenly">
         <div className="flex flex-col w-6/12">
           <div className={`${permanentMarker.className} text-5xl py-6 text-black dark:text-white`}>

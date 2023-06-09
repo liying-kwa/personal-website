@@ -11,7 +11,7 @@ const Navbar = () => {
     const currentRoute = router.pathname;
 
     return (
-        <nav className="bg-gray-200 dark:bg-gray-900">
+        <nav className="bg-gray-300 dark:bg-gray-900">
             <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link href="/" className="flex items-center">
                     <span className={`self-center text-2xl font-semibold whitespace-nowrap text-black dark:text-white ${mogra.className}`}>Li Ying KWA</span>
