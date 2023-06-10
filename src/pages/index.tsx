@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import Profile from '@/public/profile.jpg'
 import { Quicksand, Permanent_Marker } from 'next/font/google'
+import SkillsShield from '@/components/SkillsShield'
 // import VaraText from "@/components/VaraText"
 // import { useTheme } from "next-themes"
+import colors from 'tailwindcss/colors'
 
 const quicksand = Quicksand({ subsets: ['latin'] })
 const permanentMarker = Permanent_Marker({ subsets: ['latin'], weight: "400" })
@@ -41,32 +43,35 @@ export default function Home() {
         <div className="flex flex-col gap-2 text-md text-black dark:text-white">
           <p>Languages</p>
           <div className="flex flex-wrap gap-1">
-            <img alt="Java" className="h-6" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=flat&logo=intellijidea&logoColor=white" />
-            <img alt="TypeScript" className="h-6" src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white" />
-            <img alt="JavaScript" className="h-6" src="https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=typescript&logoColor=white" />
-            <img alt="Python" className="h-6" src="https://img.shields.io/badge/python-%2314354C.svg?style=flat&logo=python&logoColor=white" />
-            <img alt="Go" className="h-6" src="https://img.shields.io/badge/go%20-%23121011.svg?style=flat&logo=go&logoColor=white" />
-            <img alt="Bash" className="h-6" src="https://img.shields.io/badge/bash%20-%23121011.svg?style=flat&logo=gnubash&logoColor=white" />
-            <img alt="C#" className="h-6" src="https://img.shields.io/badge/c%23-%23239120.svg?style=flat&logo=csharp&logoColor=white" />
+            <SkillsShield imgAlt='Java' text={'java'} logo={'intellijidea'} backgroundColor='purple' />
+            <SkillsShield imgAlt='TypeScript' text={'typescript'} logo={'typescript'} backgroundColor='blue' />
+            <SkillsShield imgAlt='JavaScript' text={'javascript'} logo={'javascript'} backgroundColor='black' logoColor='yellow' />
+            <SkillsShield imgAlt='Python' text={'python'} logo={'python'} backgroundColor={colors.yellow[300].slice(1)} logoColor={colors.sky[800].slice(1)} />
+            <SkillsShield imgAlt='Go' text={'go'} logo={'go'} backgroundColor={colors.cyan[400].slice(1)} />
+            <SkillsShield imgAlt='Bash' text={'bash'} logo={'gnubash'} backgroundColor='black' />
+            <SkillsShield imgAlt='C#' text={'c%23'} logo={'csharp'} backgroundColor='darkblue' />
           </div>
           <p>Frameworks/libraries</p>
           <div className="flex flex-wrap gap-1">
-            <img alt="SpringBoot" className="h-6" src="https://img.shields.io/badge/springboot-%2320232a.svg?style=flat&logo=springboot&logoColor=%2361DAFB" />
-            <img alt="React" className="h-6" src="https://img.shields.io/badge/react-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB" />
-            <img alt="NextJS" className="h-6" src="https://img.shields.io/badge/nextjs-%2320232a.svg?style=flat&logo=nextdotjs&logoColor=%2361DAFB" />
-            <img alt="TailwindCSS" className="h-6" src="https://img.shields.io/badge/tailwindcss-%2320232a.svg?style=flat&logo=tailwindcss&logoColor=%2361DAFB" />
-            <img alt="MongoDB" className="h-6" src="https://img.shields.io/badge/mongodb-%234ea94b.svg?style=flat&logo=mongodb&logoColor=white" />
-            <img alt="MYSQL" className="h-6" src="https://img.shields.io/badge/mysql-%2300f.svg?style=flat&logo=mysql&logoColor=white" />
-            <img alt="Postgres" className="h-6" src="https://img.shields.io/badge/postgres-%23316192.svg?style=flat&logo=postgresql&logoColor=white" />
-            <img alt="AndroidStudio" className="h-6" src="https://img.shields.io/badge/android_studio-%23316192.svg?style=flat&logo=androidstudio&logoColor=white" />
-            <img alt="Docker" className="h-6" src="https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white" />
-            <img alt="Many More" className="h-6" src="https://img.shields.io/badge/...-and%20more-yellowgreen?style=flat&logo=GitHub-Sponsors" />
+            <SkillsShield imgAlt='SpringBoot' text={'springboot'} logo={'springboot'} backgroundColor='lightgray' logoColor='green' />
+            <SkillsShield imgAlt='React' text={'react'} logo={'react'} backgroundColor="gray" logoColor={colors.cyan[300].slice(1)} />
+            <SkillsShield imgAlt='NextJS' text={'nextjs'} logo={'nextdotjs'} backgroundColor='black' />
+            <SkillsShield imgAlt='TailwindCSS' text={'tailwindcss'} logo={'tailwindcss'} backgroundColor={colors.gray[200].slice(1)} logoColor={colors.sky[400].slice(1)} />
+            <SkillsShield imgAlt='JUnit' text={'junit'} logo={'intellijidea'} backgroundColor='blueviolet' />
+            <SkillsShield imgAlt='Mockito' text={'mockito'} logo={'intellijidea'} backgroundColor='indigo' />
+            <SkillsShield imgAlt='Jest' text={'jest'} logo={'jest'} backgroundColor={colors.rose[900].slice(1)} />
+            <SkillsShield imgAlt='React Testing Library' text={'react_testing_library'} logo={'testinglibrary'} backgroundColor={colors.gray[200].slice(1)} logoColor='red' />
+            <SkillsShield imgAlt='MongoDB' text={'mongodb'} logo={'mongodb'} backgroundColor='darkgreen' />
+            <SkillsShield imgAlt='MySQL' text={'mysql'} logo={'mysql'} backgroundColor='orange' logoColor='blue' />
+            <SkillsShield imgAlt='PostgreSQL' text={'postgresql'} logo={'postgresql'} backgroundColor={colors.sky[800].slice(1)} />
           </div>
           <p>Other tools</p>
           <div className="flex flex-wrap gap-1">
-            <img alt="aws" className="h-6" src="https://img.shields.io/badge/aws-%23FF9900.svg?style=flat&logo=amazon-aws&logoColor=white" />
-            <img alt="linux" className="h-6" src="https://img.shields.io/badge/linux-%23FF9900.svg?style=flat&logo=linux&logoColor=white" />
-            <img alt="unity" className="h-6" src="https://img.shields.io/badge/unity-%23FF9900.svg?style=flat&logo=unity&logoColor=white" />
+            <SkillsShield imgAlt='AWS' text={'aws'} logo={'amazon-aws'} backgroundColor={colors.amber[500].slice(1)} />
+            <SkillsShield imgAlt='Linux' text={'linux'} logo={'linux'} backgroundColor='lightblue' logoColor='black' />
+            <SkillsShield imgAlt='GitLab' text={'gitlab'} logo={'gitlab'} backgroundColor='gray' logoColor='amber' />
+            <SkillsShield imgAlt='Unity' text={'unity'} logo={'unity'} backgroundColor='black' />
+            <SkillsShield imgAlt='Android Studio' text={'android_studio'} logo={'android'} backgroundColor='green' />
           </div>
         </div>
       </div>
