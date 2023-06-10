@@ -54,7 +54,7 @@ const Experience = () => {
                     icon={<GiGraduateCap />}
                 >
                     <h3 className="vertical-timeline-element-title">Summer Exchange</h3>
-                    <h4 className="vertical-timeline-element-subtitle">University of California (Berkeley)</h4>
+                    <h4 className="vertical-timeline-element-subtitle">@ University of California (Berkeley)</h4>
                     <p>
                         [CS 61BL] Data Structures and Programming Methodology
                     </p>
@@ -67,8 +67,8 @@ const Experience = () => {
                     iconStyle={{ background: theme === 'dark' ? colors.green[600] : colors.green[400], color: colors.white }}
                     icon={<GiGraduateCap />}
                 >
-                    <h3 className="vertical-timeline-element-title">Bachelor of Engineering</h3>
-                    <h4 className="vertical-timeline-element-subtitle">(Information Systems Technology and Design)</h4>
+                    <h3 className="vertical-timeline-element-title">Bachelor of Engineering (Honours),</h3>
+                    <h4 className="vertical-timeline-element-subtitle">Information Systems Technology and Design</h4>
                     <h4 className="vertical-timeline-element-subtitle">@ Singapore University of Technology and Design (SUTD)</h4>
                     <p>
                         Computer Science

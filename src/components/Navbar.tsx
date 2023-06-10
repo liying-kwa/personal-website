@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router'
-import { Mogra } from 'next/font/google'
+import { Mogra, Quicksand } from 'next/font/google'
 import ThemeButton from './ThemeButton';
 // TODO: Choose 1 - Kalam, Mogra, VT323, Chewy
 
 const mogra = Mogra({ subsets: ['latin'], weight: "400" })
+const quicksand = Quicksand({ subsets: ['latin'] })
 
 const Navbar = () => {
     const router = useRouter();
@@ -17,7 +18,7 @@ const Navbar = () => {
                     <span className={`self-center text-2xl font-semibold whitespace-nowrap text-black dark:text-white ${mogra.className}`}>Li Ying KWA</span>
                 </Link>
                 <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-                    <ul className="font-medium flex flex-row space-x-8">
+                    <ul className={`flex flex-row space-x-8 ${quicksand.className} font-medium font-semibold`}>
                         {[
                             ['Home', '/'],
                             ['Experience', '/experience'],
