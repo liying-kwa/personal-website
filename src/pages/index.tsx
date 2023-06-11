@@ -18,7 +18,7 @@ export default function Home() {
       <div className="flex flex-row h-fit w-full items-center justify-evenly">
         <div className="flex flex-col w-6/12">
           <div className={`${permanentMarker.className} text-5xl py-6 text-black dark:text-white`}>
-            Hi, I'm Li Ying
+            Hi, I{"'"}m Li Ying
           </div>
           {/* <div className="w-full items-center">
             <VaraText text="Hi, I'm Li Ying" theme={theme!} />
