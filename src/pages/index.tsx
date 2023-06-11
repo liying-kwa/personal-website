@@ -11,7 +11,7 @@ const quicksand = Quicksand({ subsets: ['latin'] })
 const permanentMarker = Permanent_Marker({ subsets: ['latin'], weight: "400" })
 
 export default function Home() {
-  const { theme } = useTheme();
+  // const { theme } = useTheme();
 
   return (
     <main className="flex flex-col min-h-screen justify-between p-24 bg-gray-100 dark:bg-black">
@@ -28,7 +28,11 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center mt-12">
             <BsArrowDownShort
-              className="w-12 h-12 rounded-full bg-white dark:bg-blue-600 drop-shadow-xl animate-bounce" color={theme === "dark" ? "white" : colors.blue[600]}
+              className="w-12 h-12 rounded-full bg-white drop-shadow-xl animate-bounce block dark:hidden" color={colors.blue[600]}
+              onClick={() => { window.scroll({ top: 1000, behavior: "smooth" }) }}
+            />
+            <BsArrowDownShort
+              className="w-12 h-12 rounded-full bg-blue-600 drop-shadow-xl animate-bounce hidden dark:block" color="white"
               onClick={() => { window.scroll({ top: 1000, behavior: "smooth" }) }}
             />
           </div>
@@ -44,11 +48,11 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className={`${quicksand.className} p-24`}>
-        <h2 className="text-3xl font-semibold text-black dark:text-white">Skills</h2>
+      <div className={`p-24  ${quicksand.className} text-black dark:text-white`}>
+        <h2 className="text-3xl font-semibold">Skills</h2>
         <p className="py-6">Left = more proficient; Right = less proficient</p>
         {/* <h3 className="py-6 text-xl font-semibold text-black dark:text-white">From left to right - most proficient to least proficient:</h3> */}
-        <div className="flex flex-col gap-2 text-lg text-black dark:text-white font-semibold">
+        <div className="flex flex-col gap-2 text-lg font-semibold">
           <p>Languages</p>
           <div className="flex flex-wrap gap-2">
             <SkillsShield imgAlt='Java' text={'java'} logo={'intellijidea'} backgroundColor='indigo' />
