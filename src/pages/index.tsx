@@ -11,7 +11,7 @@ const quicksand = Quicksand({ subsets: ['latin'] })
 const permanentMarker = Permanent_Marker({ subsets: ['latin'], weight: "400" })
 
 export default function Home() {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <main className="flex flex-col min-h-screen justify-between p-24 bg-gray-100 dark:bg-black">
