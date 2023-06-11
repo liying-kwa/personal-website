@@ -16,9 +16,9 @@ const ProjectCard = (props: ProjectCardProps) => {
     const [flip, setFlip] = useState(false);
 
     return (
-        <div className="w-1/4 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className="w-1/4 max-w-sm">
             <ReactCardFlip isFlipped={flip} flipDirection="horizontal">
-                <div className="flex flex-col">
+                <div className="flex flex-col bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <img
                         className="rounded-t-lg object-cover h-48 bg-gray-800 dark:bg-gray-200"
                         src={props.imgSrc ?? "/vercel.svg"}
@@ -36,7 +36,7 @@ const ProjectCard = (props: ProjectCardProps) => {
                     </div>
 
                 </div>
-                <div className="flex flex-col p-7 justify-between leading-normal h-96">
+                <div className="flex flex-col bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-7 justify-between leading-normal h-96">
                     <div className="mb-3 text-md text-gray-700 dark:text-gray-400">
                         <p>{`Date: ${props.date}`}</p>
                         <p>Repository: <Link className="text-blue-600 hover:text-blue-500" href={props.flipDescriptionLinks.repository}>{props.flipDescriptionLinks.repository}</Link></p>

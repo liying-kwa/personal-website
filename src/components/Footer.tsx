@@ -12,9 +12,6 @@ const Footer = () => {
                     </span>
                     <div className="flex space-x-6">
                         <Link href="https://www.linkedin.com/in/liying-kwa/" className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
-                            <GrMail />
-                        </Link>
-                        <Link href="https://www.linkedin.com/in/liying-kwa/" className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                             <SiLinkedin />
                         </Link>
                         <Link href="https://github.com/liying-kwa" className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
