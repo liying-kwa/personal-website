@@ -17,7 +17,7 @@ const ThemeButton = () => {
     return (
         <div className="relative">
             <button
-                className="rounded-lg bg-gray-300 dark:bg-gray-900 border-gray-400 md:hover:bg-gray-600 md:dark:hover:bg-gray-300 transition-all duration-200 px-2 pb-3"
+                className="rounded-lg bg-gray-100 dark:bg-gray-900 border-gray-400 md:hover:bg-gray-300 md:dark:hover:bg-gray-700 transition-all duration-200 px-2 pb-3"
                 onClick={() => currentTheme === "light" ? setTheme("dark") : setTheme("light")}
                 onMouseEnter={onHover}
                 onMouseLeave={onLeave}>

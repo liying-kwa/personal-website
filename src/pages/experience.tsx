@@ -15,7 +15,7 @@ const Experience = () => {
     const { theme } = useTheme();
 
     return (
-        <main className={`${quicksand.className} flex min-h-screen flex-col items-center justify-between p-24 bg-gray-100 dark:bg-black text-black dark:text-white`}>
+        <main className={`${quicksand.className} flex min-h-screen flex-col items-center justify-between p-24 bg-white dark:bg-black text-black dark:text-white`}>
             <VerticalTimeline>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"

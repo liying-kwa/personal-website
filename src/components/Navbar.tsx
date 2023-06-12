@@ -21,13 +21,13 @@ const Navbar = () => {
     const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
 
     return (
-        <nav className="bg-gray-300 dark:bg-gray-900">
+        <nav className="bg-gray-100 dark:bg-gray-900">
             <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-4 md:px-24 py-2 md:py-4">
                 {/* Mobile menu button */}
                 <div className="block md:hidden">
                     <button
                         type="button"
-                        className={`inline-flex items-center p-3 text-sm rounded-lg ${isExpanded ? "text-white dark:text-black bg-blue-700 dark:bg-blue-300" : "text-black dark:text-white bg-gray-300 dark:bg-gray-900"}`}
+                        className={`inline-flex items-center p-3 text-sm rounded-lg ${isExpanded ? "text-white dark:text-black bg-blue-700 dark:bg-blue-300" : "text-black dark:text-white bg-gray-100 dark:bg-gray-900"}`}
                         {...getToggleProps()} >
                         <AiOutlineMenu className='h-6 w-6' />
                     </button>
