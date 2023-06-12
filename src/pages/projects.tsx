@@ -39,7 +39,7 @@ const Projects = () => {
                     title="This Spells Trouble!"
                     description="A 2D battle arena local multiplayer game for 2-4 players"
                     date="Jul to Aug 2021"
-                    flipDescriptionLinks={{ repository: 'https://github.com/liying-kwa/This-Spells-Trouble' }}
+                    flipDescriptionLinks={{ repository: 'https://github.com/liying-kwa/This-Spells-Trouble', demo: 'https://drive.google.com/file/d/1bt_a55s7HWKYjCAbH8ucRwUCT4t8kJ13/view?usp=sharing' }}
                     flipDescription={["Language(s) & framework(s): Unity, C#", "Inspiration: blah blah blah"]}
                     imgSrc="/this-spells-trouble.jpeg"
                     imgAlt="this-spells-trouble" />
@@ -47,7 +47,7 @@ const Projects = () => {
                     title="TinyCare"
                     description="An automated food dispenser machine for tiny pets, such as hamsters and fishes"
                     date="Nov 2019 to Mar 2020"
-                    flipDescriptionLinks={{ repository: 'https://github.com/liying-kwa/TinyCare' }}
+                    flipDescriptionLinks={{ repository: 'https://github.com/liying-kwa/TinyCare', demo: 'https://www.youtube.com/watch?v=kdCNISgoIZ4&feature=youtu.be' }}
                     flipDescription={["Language(s) & framework(s): Android Studio, Java, Python", "HamsterCare: https://github.com/liying-kwa/HamsterCare"]}
                     imgSrc="/tinycare.jpg"
                     imgAlt="tinycare" />

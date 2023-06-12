@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import ReactCardFlip from "react-card-flip";
+import { TbExternalLink } from 'react-icons/tb'
 
 interface ProjectCardProps {
     title: string;
     description: string;
     date: string;
-    flipDescriptionLinks: { repository: string, feature?: string };
+    flipDescriptionLinks: { repository?: string, feature?: string, demo?: string };
     flipDescription: string[];
     imgSrc?: string;
     imgAlt?: string;
@@ -39,8 +40,24 @@ const ProjectCard = (props: ProjectCardProps) => {
                 <div className="flex flex-col bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-7 justify-between leading-normal h-96">
                     <div className="mb-3 text-md text-gray-700 dark:text-gray-400">
                         <p>{`Date: ${props.date}`}</p>
-                        <p>Repository: <Link className="text-blue-600 hover:text-blue-500" href={props.flipDescriptionLinks.repository}>{props.flipDescriptionLinks.repository}</Link></p>
-                        {props.flipDescriptionLinks.feature && <p>Feature: <Link className="text-blue-600 hover:text-blue-500" href={props.flipDescriptionLinks.feature}>{props.flipDescriptionLinks.feature}</Link></p>}
+                        {props.flipDescriptionLinks.demo &&
+                            <p>Demo:{' '}
+                                <Link className="text-blue-600 hover:text-blue-500 inline-block" href={props.flipDescriptionLinks.demo} target="_blank">
+                                    <TbExternalLink />
+                                </Link>
+                            </p>}
+                        {props.flipDescriptionLinks.repository &&
+                            <p>Repository:{' '}
+                                <Link className="text-blue-600 hover:text-blue-500 inline-block" href={props.flipDescriptionLinks.repository} target="_blank">
+                                    <TbExternalLink />
+                                </Link>
+                            </p>}
+                        {props.flipDescriptionLinks.feature &&
+                            <p>Feature:{' '}
+                                <Link className="text-blue-600 hover:text-blue-500 inline-block" href={props.flipDescriptionLinks.feature} target="_blank">
+                                    <TbExternalLink />
+                                </Link>
+                            </p>}
                         {props.flipDescription.map((line, index) => <p key={index}>{line}</p>)}
                     </div>
                     <button
