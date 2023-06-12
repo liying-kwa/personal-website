@@ -48,9 +48,9 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className={`p-24  ${quicksand.className} text-black dark:text-white`}>
-        <h2 className="text-3xl font-semibold">Skills</h2>
-        <p className="py-6">Left = more proficient; Right = less proficient</p>
+      <div className={`p-12 md:p-24 md:mx-12 md:px-auto ${quicksand.className} text-black dark:text-white`}>
+        <h2 className="text-3xl font-semibold pb-6">Skills</h2>
+        <p className="hidden md:block pb-6">Left = more proficient; Right = less proficient</p>
         {/* <h3 className="py-6 text-xl font-semibold text-black dark:text-white">From left to right - most proficient to least proficient:</h3> */}
         <div className="flex flex-col gap-2 text-lg font-semibold">
           <p>Languages</p>
@@ -63,7 +63,7 @@ export default function Home() {
             <SkillsShield imgAlt='Bash' text={'bash'} logo={'gnubash'} backgroundColor='black' />
             <SkillsShield imgAlt='C#' text={'c%23'} logo={'csharp'} backgroundColor='purple' />
           </div>
-          <p>Frameworks/libraries</p>
+          <p className="pt-3">Frameworks/libraries</p>
           <div className="flex flex-wrap gap-2">
             <SkillsShield imgAlt='SpringBoot' text={'springboot'} logo={'springboot'} backgroundColor='lightgray' logoColor='green' />
             <SkillsShield imgAlt='React' text={'react'} logo={'react'} backgroundColor="gray" logoColor={colors.cyan[300].slice(1)} />
@@ -77,7 +77,7 @@ export default function Home() {
             <SkillsShield imgAlt='MySQL' text={'mysql'} logo={'mysql'} backgroundColor='orange' logoColor='blue' />
             <SkillsShield imgAlt='PostgreSQL' text={'postgresql'} logo={'postgresql'} backgroundColor={colors.sky[800].slice(1)} />
           </div>
-          <p>Other tools</p>
+          <p className="pt-3">Other tools</p>
           <div className="flex flex-wrap gap-2">
             <SkillsShield imgAlt='AWS' text={'aws'} logo={'amazon-aws'} backgroundColor={colors.amber[500].slice(1)} />
             <SkillsShield imgAlt='Linux' text={'linux'} logo={'linux'} backgroundColor='lightblue' logoColor='black' />

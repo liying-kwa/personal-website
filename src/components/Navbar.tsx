@@ -33,7 +33,7 @@ const Navbar = () => {
                     </button>
                 </div>
                 <Link href="/" className="flex items-center">
-                    <span className={`self-center text-2xl font-semibold whitespace-nowrap text-black dark:text-white ${mogra.className}`}>Li Ying KWA</span>
+                    <span className={`mt-2 md:m-0 self-center text-2xl font-semibold whitespace-nowrap text-black dark:text-white ${mogra.className}`}>Li Ying KWA</span>
                 </Link>
                 <div className="hidden md:block w-full md:w-auto" id="navbar-default">
                     <ul className={`flex flex-row space-x-8 ${quicksand.className} font-medium font-semibold`}>
