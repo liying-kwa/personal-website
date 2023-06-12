@@ -8,35 +8,37 @@ import { AiOutlineMenu } from 'react-icons/ai';
 
 const mogra = Mogra({ subsets: ['latin'], weight: "400" })
 const quicksand = Quicksand({ subsets: ['latin'] })
+const navbarColor = "bg-gray-200 dark:bg-gray-900";
+const navItems = [
+    ['Home', '/'],
+    ['Experience', '/experience'],
+    ['Projects', '/projects'],
+    ['Resources', '/resources'],
+]
 
 const Navbar = () => {
     const router = useRouter();
     const currentRoute = router.pathname;
-    const { getCollapseProps, getToggleProps, setExpanded } = useCollapse();
+    const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
 
     return (
-        <nav className="bg-gray-300 dark:bg-gray-900">
-            <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <nav className={`${navbarColor}`}>
+            <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-4 md:px-24 py-2 md:py-4">
+                {/* Mobile menu button */}
                 <div className="block md:hidden">
                     <button
                         type="button"
-                        className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 dark:text-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600"
+                        className={`inline-flex items-center p-3 text-sm rounded-lg ${isExpanded ? "text-white dark:text-black bg-blue-700 dark:bg-blue-300" : "text-black dark:text-white " + navbarColor}`}
                         {...getToggleProps()} >
                         <AiOutlineMenu className='h-6 w-6' />
                     </button>
-
                 </div>
                 <Link href="/" className="flex items-center">
-                    <span className={`self-center text-2xl font-semibold whitespace-nowrap text-black dark:text-white ${mogra.className}`}>Li Ying KWA</span>
+                    <span className={`mt-2 md:m-0 self-center text-2xl font-semibold whitespace-nowrap text-black dark:text-white ${mogra.className}`}>Li Ying KWA</span>
                 </Link>
                 <div className="hidden md:block w-full md:w-auto" id="navbar-default">
                     <ul className={`flex flex-row space-x-8 ${quicksand.className} font-medium font-semibold`}>
-                        {[
-                            ['Home', '/'],
-                            ['Experience', '/experience'],
-                            ['Projects', '/projects'],
-                            ['Resources', '/resources'],
-                        ].map(([title, url], index) => (
+                        {navItems.map(([title, url], index) => (
                             <li key={index}>
                                 <Link
                                     href={url}
@@ -47,21 +49,15 @@ const Navbar = () => {
                         ))}
                     </ul>
                 </div>
-                <ThemeButton />
+                <ThemeButton navbarColor={navbarColor} />
             </div>
-            <div className="w-full" {...getCollapseProps()}>
-                <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-200 dark:bg-gray-800 dark:border-gray-700">
-                    {[
-                        ['Home', '/'],
-                        ['Experience', '/experience'],
-                        ['Projects', '/projects'],
-                        ['Resources', '/resources'],
-                    ].map(([title, url], index) => (
+            <div className={"w-full block md:hidden"} {...getCollapseProps()}>
+                <ul className={`flex flex-col rounded-lg bg-gray-300 dark:bg-gray-800 dark:border-gray-700 ${quicksand.className} font-medium font-semibold`}>
+                    {navItems.map(([title, url], index) => (
                         <li key={index}>
                             <Link
                                 href={url}
-                                // onClick={() => setExpanded(false)}
-                                className={currentRoute === url ? "block py-2 pl-3 pr-4 text-white bg-blue-700 rounded dark:bg-blue-600" : "block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"}>
+                                className={currentRoute === url ? "block py-2 pl-3 pr-4 rounded text-white dark:text-black bg-blue-700 dark:bg-blue-300" : "block py-2 pl-3 pr-4 rounded text-gray-900 dark:text-gray-400"}>
                                 {title}
                             </Link>
                         </li>
