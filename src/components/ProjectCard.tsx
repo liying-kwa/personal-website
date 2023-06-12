@@ -16,7 +16,7 @@ const ProjectCard = (props: ProjectCardProps) => {
     const [flip, setFlip] = useState(false);
 
     return (
-        <div className="w-1/4 max-w-sm">
+        <div className="w-80">
             <ReactCardFlip isFlipped={flip} flipDirection="horizontal">
                 <div className="flex flex-col bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <img

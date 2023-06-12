@@ -10,27 +10,31 @@ const Projects = () => {
     const { theme } = useTheme();
 
     return (
-        <main className={`${quicksand.className} flex flex-col min-h-screen items-start px-36 pb-12 bg-gray-100 dark:bg-black`}>
-            <h2 className="py-12 text-3xl font-semibold text-black dark:text-white">Personal Projects</h2>
-            <ProjectCard
-                title="This Website"
-                description="A personal website that I created because I was bored"
-                date="May to Jun 2023"
-                flipDescriptionLinks={{ repository: 'https://github.com/liying-kwa/personal-website' }}
-                flipDescription={["Language(s) & frameworks(s): NextJS, React/TypeScript, TailwindCSS"]}
-                imgSrc={theme === "dark" ? "/website.jpg" : "website-dark.jpg"}
-                imgAlt="website" />
-            <h2 className="py-12 text-3xl font-semibold text-black dark:text-white">Open Source Contributions</h2>
-            <ProjectCard
-                title="Git Duet"
-                description="Implemented the 'allow multiple committers' feature"
-                date="Nov 2022"
-                flipDescriptionLinks={{ repository: 'https://github.com/git-duet/git-duet', feature: 'https://github.com/git-duet/git-duet/pull/118' }}
-                flipDescription={["Language(s) & frameworks(s): Go, Bash"]}
-                imgSrc="/git-duet.png"
-                imgAlt="git-duet" />
-            <h2 className="py-12 text-3xl font-semibold text-black dark:text-white">School (Group) Projects</h2>
-            <div className="flex w-full gap-x-24">
+        <main className={`${quicksand.className} flex flex-col min-h-screen items-start md:px-36 pb-12 bg-gray-100 dark:bg-black`}>
+            <h2 className="px-10 md:px-0 py-8 md:py-12 text-2xl md:text-3xl font-semibold text-black dark:text-white">Personal Projects</h2>
+            <div className="flex flex-col md:flex-row items-center md:items-start w-full gap-y-12 md:gap-x-24">
+                <ProjectCard
+                    title="This Website"
+                    description="A personal website that I created because I was bored"
+                    date="May to Jun 2023"
+                    flipDescriptionLinks={{ repository: 'https://github.com/liying-kwa/personal-website' }}
+                    flipDescription={["Language(s) & frameworks(s): NextJS, React/TypeScript, TailwindCSS"]}
+                    imgSrc={theme === "dark" ? "/website.jpg" : "website-dark.jpg"}
+                    imgAlt="website" />
+            </div>
+            <h2 className="px-10 md:px-0 py-8 md:py-12 text-2xl md:text-3xl font-semibold text-black dark:text-white">Open Source Contributions</h2>
+            <div className="flex flex-col md:flex-row items-center md:items-start w-full gap-y-12 md:gap-x-24">
+                <ProjectCard
+                    title="Git Duet"
+                    description="Implemented the 'allow multiple committers' feature"
+                    date="Nov 2022"
+                    flipDescriptionLinks={{ repository: 'https://github.com/git-duet/git-duet', feature: 'https://github.com/git-duet/git-duet/pull/118' }}
+                    flipDescription={["Language(s) & frameworks(s): Go, Bash"]}
+                    imgSrc="/git-duet.png"
+                    imgAlt="git-duet" />
+            </div>
+            <h2 className="px-10 md:px-0 py-8 md:py-12 text-2xl md:text-3xl font-semibold text-black dark:text-white">School (Group) Projects</h2>
+            <div className="flex flex-col md:flex-row items-center md:items-start w-full gap-y-12 md:gap-x-24">
                 <ProjectCard
                     title="This Spells Trouble!"
                     description="A 2D battle arena local multiplayer game for 2-4 players"
