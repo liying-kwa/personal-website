@@ -10,7 +10,7 @@ const Projects = () => {
     const { theme } = useTheme();
 
     return (
-        <main className={`${quicksand.className} flex flex-col min-h-screen items-start px-36 pb-12 bg-white dark:bg-black`}>
+        <main className={`${quicksand.className} flex flex-col min-h-screen items-start px-36 pb-12 bg-gray-100 dark:bg-black`}>
             <h2 className="py-12 text-3xl font-semibold text-black dark:text-white">Personal Projects</h2>
             <ProjectCard
                 title="This Website"

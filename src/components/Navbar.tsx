@@ -8,6 +8,7 @@ import { AiOutlineMenu } from 'react-icons/ai';
 
 const mogra = Mogra({ subsets: ['latin'], weight: "400" })
 const quicksand = Quicksand({ subsets: ['latin'] })
+const navbarColor = "bg-gray-200 dark:bg-gray-900";
 const navItems = [
     ['Home', '/'],
     ['Experience', '/experience'],
@@ -21,13 +22,13 @@ const Navbar = () => {
     const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
 
     return (
-        <nav className="bg-gray-100 dark:bg-gray-900">
+        <nav className={`${navbarColor}`}>
             <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-4 md:px-24 py-2 md:py-4">
                 {/* Mobile menu button */}
                 <div className="block md:hidden">
                     <button
                         type="button"
-                        className={`inline-flex items-center p-3 text-sm rounded-lg ${isExpanded ? "text-white dark:text-black bg-blue-700 dark:bg-blue-300" : "text-black dark:text-white bg-gray-100 dark:bg-gray-900"}`}
+                        className={`inline-flex items-center p-3 text-sm rounded-lg ${isExpanded ? "text-white dark:text-black bg-blue-700 dark:bg-blue-300" : "text-black dark:text-white " + navbarColor}`}
                         {...getToggleProps()} >
                         <AiOutlineMenu className='h-6 w-6' />
                     </button>
@@ -48,10 +49,10 @@ const Navbar = () => {
                         ))}
                     </ul>
                 </div>
-                <ThemeButton />
+                <ThemeButton navbarColor={navbarColor} />
             </div>
             <div className={"w-full block md:hidden"} {...getCollapseProps()}>
-                <ul className={`flex flex-col rounded-lg bg-gray-200 dark:bg-gray-800 dark:border-gray-700 ${quicksand.className} font-medium font-semibold`}>
+                <ul className={`flex flex-col rounded-lg bg-gray-300 dark:bg-gray-800 dark:border-gray-700 ${quicksand.className} font-medium font-semibold`}>
                     {navItems.map(([title, url], index) => (
                         <li key={index}>
                             <Link

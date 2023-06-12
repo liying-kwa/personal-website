@@ -15,7 +15,7 @@ const Experience = () => {
     const { theme } = useTheme();
 
     return (
-        <main className={`${quicksand.className} flex min-h-screen flex-col items-center justify-between p-24 bg-white dark:bg-black text-black dark:text-white`}>
+        <main className={`${quicksand.className} flex min-h-screen flex-col items-center justify-between p-12 md:p-24 bg-gray-100 dark:bg-black text-black dark:text-white`}>
             <VerticalTimeline>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
@@ -26,7 +26,7 @@ const Experience = () => {
                     icon={<SiIndeed />}
                 >
                     <h3 className="vertical-timeline-element-title">Software Engineer @ Indeed.com</h3>
-                    <h4 className="vertical-timeline-element-subtitle">Hybrid (SG office / Remote)</h4>
+                    <h4 className="vertical-timeline-element-subtitle hidden md:block">Hybrid (SG office / Remote)</h4>
                     <p>
                         Fullstack Development
                     </p>
@@ -40,7 +40,7 @@ const Experience = () => {
                     icon={<ImBriefcase />}
                 >
                     <h3 className="vertical-timeline-element-title">Information Research Intern @ DSO National Laboratories</h3>
-                    <h4 className="vertical-timeline-element-subtitle">Hybrid (SG office / Remote)</h4>
+                    <h4 className="vertical-timeline-element-subtitle hidden md:block">Hybrid (SG office / Remote)</h4>
                     <p>
                         Cloud Security, Kubernetes
                     </p>
@@ -54,7 +54,8 @@ const Experience = () => {
                     icon={<GiGraduateCap />}
                 >
                     <h3 className="vertical-timeline-element-title">Summer Exchange</h3>
-                    <h4 className="vertical-timeline-element-subtitle">@ University of California (Berkeley)</h4>
+                    <h4 className="vertical-timeline-element-subtitle hidden md:block">@ University of California (Berkeley)</h4>
+                    <h4 className="vertical-timeline-element-subtitle block md:hidden">@ UCal (Berkeley)</h4>
                     <p>
                         [CS 61BL] Data Structures and Programming Methodology
                     </p>
@@ -67,9 +68,10 @@ const Experience = () => {
                     iconStyle={{ background: theme === 'dark' ? colors.green[600] : colors.green[400], color: colors.white }}
                     icon={<GiGraduateCap />}
                 >
-                    <h3 className="vertical-timeline-element-title">Bachelor of Engineering (Honours),</h3>
-                    <h4 className="vertical-timeline-element-subtitle">Information Systems Technology and Design</h4>
-                    <h4 className="vertical-timeline-element-subtitle">@ Singapore University of Technology and Design (SUTD)</h4>
+                    <h3 className="vertical-timeline-element-title hidden md:block">BEng (Hons), Information Systems Technology and Design</h3>
+                    <h3 className="vertical-timeline-element-title block md:hidden">BEng (Hons), ISTD</h3>
+                    <h4 className="vertical-timeline-element-subtitle hidden md:block">@ Singapore University of Technology and Design (SUTD)</h4>
+                    <h4 className="vertical-timeline-element-subtitle block md:hidden">@ SUTD</h4>
                     <p>
                         Computer Science
                     </p>

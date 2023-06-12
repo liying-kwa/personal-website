@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col min-h-screen justify-between bg-gray-100 dark:bg-gray-900">
-      <div className="flex flex-col-reverse md:flex-row h-fit w-full p-12 md:py-24 items-center justify-evenly bg-violet-200 dark:bg-indigo-950 md:bg-violet-200 md:dark:bg-indigo-950">
+      <div className="flex flex-col-reverse md:flex-row h-fit w-full p-12 md:py-24 items-center justify-evenly bg-violet-200 dark:bg-indigo-950">
         <div className="flex flex-col w-7/8 md:w-5/12">
           <div className={`${permanentMarker.className} text-center md:text-left text-4xl md:text-5xl py-6 text-black dark:text-white`}>
             Hi, I{"'"}m Li Ying
