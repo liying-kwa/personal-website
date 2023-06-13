@@ -2,15 +2,24 @@ import Link from 'next/link';
 import { useState } from 'react';
 import ReactCardFlip from "react-card-flip";
 import { TbExternalLink } from 'react-icons/tb'
+import SkillsShield from './SkillsShield';
+import colors from 'tailwindcss/colors';
 
 interface ProjectCardProps {
     title: string;
     description: string;
-    date: string;
-    flipDescriptionLinks: { repository?: string, feature?: string, demo?: string };
-    flipDescription: string[];
     imgSrc?: string;
     imgAlt?: string;
+    date: string;
+    status: string;
+    flipDescriptionLinks: { repository?: string, feature?: string, demo?: string };
+    flipDescription?: JSX.Element;
+}
+
+const statusColor: { [key: string]: string } = {
+    'completed': colors.gray[500].slice(1),
+    'maintenance': colors.rose[500].slice(1),
+    'in_progress': colors.lime[500].slice(1)
 }
 
 const ProjectCard = (props: ProjectCardProps) => {
@@ -39,7 +48,10 @@ const ProjectCard = (props: ProjectCardProps) => {
                 </div>
                 <div className="flex flex-col bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-7 justify-between leading-normal h-96">
                     <div className="mb-3 text-md text-gray-700 dark:text-gray-400">
-                        <p>{`Date: ${props.date}`}</p>
+                        <div className="flex justify-between">
+                            <h5 className="text-lg font-bold pb-2">{props.date}</h5>
+                            <SkillsShield imgAlt={props.status} style='plastic' text={props.status} backgroundColor={statusColor[props.status]} className='h-5 mt-0.5' />
+                        </div>
                         {props.flipDescriptionLinks.demo &&
                             <p>Demo:{' '}
                                 <Link className="text-blue-600 hover:text-blue-500 inline-block" href={props.flipDescriptionLinks.demo} target="_blank">
@@ -58,7 +70,7 @@ const ProjectCard = (props: ProjectCardProps) => {
                                     <TbExternalLink />
                                 </Link>
                             </p>}
-                        {props.flipDescription.map((line, index) => <p key={index}>{line}</p>)}
+                        {props.flipDescription}
                     </div>
                     <button
                         className="rounded bg-blue-500 hover:bg-blue-600 dark:bg-blue-400 dark:hover:bg-blue-300 text-white dark:text-black w-24 text-sm py-1"
