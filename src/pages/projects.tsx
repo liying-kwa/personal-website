@@ -69,7 +69,7 @@ const Projects = () => {
                                 <SkillsShield className="h-5" style='plastic' imgAlt='Go' text={'go'} logo={'go'} backgroundColor={colors.cyan[400].slice(1)} />
                                 <SkillsShield className="h-5" style='plastic' imgAlt='Bash' text={'bash'} logo={'gnubash'} backgroundColor='black' />
                             </div>
-                            <p>Inspiration: My team @ Indeed.com used git-duet for pair programming and occasional mob programming, but there wasn't support for the latter at that time.</p>
+                            <p>Inspiration: My team @ Indeed.com used git-duet for pair programming and occasional mob programming, but there wasn{"'"}t support for the latter at that time.</p>
                         </>
                     }
                 />
