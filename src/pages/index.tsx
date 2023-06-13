@@ -3,7 +3,7 @@ import Profile from '@/public/profile.jpg'
 import { Quicksand, Permanent_Marker } from 'next/font/google'
 import SkillsShield from '@/components/SkillsShield'
 // import VaraText from "@/components/VaraText"
-import { useTheme } from "next-themes"
+// import { useTheme } from "next-themes"
 import colors from 'tailwindcss/colors'
 import { BsArrowDownShort } from 'react-icons/bs';
 
