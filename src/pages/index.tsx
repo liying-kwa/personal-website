@@ -38,7 +38,7 @@ export default function Home() {
           </div>
         </div>
         {/* Fix justify-self-center? */}
-        <div className="w-3/5 md:w-1/3 hover:animate-pulse">
+        <div className="w-3/5 md:w-1/3">
           <Image
             style={{ borderRadius: '50%', border: '3px solid white' }}
             src={Profile}
