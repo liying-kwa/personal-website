@@ -19,7 +19,7 @@ const Projects = () => {
             <div className="flex flex-col md:flex-row items-center md:items-start w-full gap-y-12 md:gap-x-24">
                 <ProjectCard
                     title="This Website"
-                    description="A personal website that I created because I was bored"
+                    description={<p>A personal website that I created because I was bored</p>}
                     imgSrc={theme === "dark" ? "/website.jpg" : "website-dark.jpg"}
                     imgAlt="website"
                     date="May ~ Jun 2023"
@@ -47,7 +47,7 @@ const Projects = () => {
             <div className="flex flex-col md:flex-row items-center md:items-start w-full gap-y-12 md:gap-x-24">
                 <ProjectCard
                     title="Git Duet"
-                    description="Implemented the 'allow multiple committers' feature"
+                    description={<p>An open source git extension that aids pair programming</p>}
                     imgSrc="/pair-programming.jpg"
                     imgAlt="pair-programming"
                     date="Nov 2022"
@@ -69,7 +69,33 @@ const Projects = () => {
                                 <SkillsShield className="h-5" style='plastic' imgAlt='Go' text={'go'} logo={'go'} backgroundColor={colors.cyan[400].slice(1)} />
                                 <SkillsShield className="h-5" style='plastic' imgAlt='Bash' text={'bash'} logo={'gnubash'} backgroundColor='black' />
                             </div>
-                            <p>Inspiration: My team @ Indeed.com used git-duet for pair programming and occasional mob programming, but there wasn{"'"}t support for the latter at that time.</p>
+                            <p>Implemented the {"'"}allow multiple committers{"'"} feature.</p>
+                        </>
+                    }
+                />
+                <ProjectCard
+                    title="RecycleGoWhere"
+                    description={<p>A BetterSG{<Link className="text-blue-600 hover:text-blue-500 inline-block" href='https://better.sg' target="_blank">
+                        <TbExternalLink />
+                    </Link>} project that aims to raise awareness/empathy towards recycling</p>}
+                    imgSrc="/unclesemakau.png"
+                    imgAlt="unclesemakau.png"
+                    date="Aug 2023 ~ Present"
+                    status={'in_progress'}
+                    flipDescription={
+                        <>
+                            <p>Repository:{' '}
+                                <Link className="text-blue-600 hover:text-blue-500 inline-block" href="hhttps://github.com/bettersg/recyclegowhere" target="_blank">
+                                    <TbExternalLink />
+                                </Link>
+                            </p>
+                            <div className="flex flex-wrap gap-2 mt-1 mb-2">
+                                <p>Stack: </p>
+                                <SkillsShield className="h-5" style='plastic' imgAlt='NextJS' text={'nextjs'} logo={'nextdotjs'} backgroundColor={colors.gray[200].slice(1)} logoColor='black' />
+                                <SkillsShield className="h-5" style='plastic' imgAlt='React' text={'react'} logo={'react'} backgroundColor="gray" logoColor={colors.cyan[300].slice(1)} />
+                                <SkillsShield className="h-5" style='plastic' imgAlt='TypeScript' text={'typescript'} logo={'typescript'} backgroundColor='blue' />
+                            </div>
+                            <p>Volunteered to participate in the project as a frontend developer. Contributed to features such as Pickup page.</p>
                         </>
                     }
                 />
@@ -78,7 +104,7 @@ const Projects = () => {
             <div className="flex flex-col md:flex-row items-center md:items-start w-full gap-y-12 md:gap-x-24">
                 <ProjectCard
                     title="This Spells Trouble!"
-                    description="A 2D battle arena local multiplayer game for 2-4 players"
+                    description={<p>A 2D battle arena local multiplayer game for 2-4 players</p>}
                     imgSrc="/this-spells-trouble.jpeg"
                     imgAlt="this-spells-trouble"
                     date="Jul ~ Aug 2021"
@@ -106,7 +132,7 @@ const Projects = () => {
                 />
                 <ProjectCard
                     title="TinyCare"
-                    description="An automated food dispenser machine for tiny pets, such as hamsters and fishes"
+                    description={<p>An automated food dispenser machine for tiny pets, such as hamsters and fishes</p>}
                     imgSrc="/tinycare.jpg"
                     imgAlt="tinycare"
                     date="Nov 2019 ~ Mar 2020"
