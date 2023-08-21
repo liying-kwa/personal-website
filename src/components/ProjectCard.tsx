@@ -7,7 +7,7 @@ import colors from 'tailwindcss/colors';
 
 interface ProjectCardProps {
     title: string;
-    description: string;
+    description: JSX.Element;
     imgSrc?: string;
     imgAlt?: string;
     date: string;
@@ -36,7 +36,7 @@ const ProjectCard = (props: ProjectCardProps) => {
                     <div className="flex flex-col justify-between py-6 px-8 leading-normal h-48">
                         <div>
                             <h3 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{props.title}</h3>
-                            <p className="mb-2 text-md text-gray-700 dark:text-gray-400">{props.description}</p>
+                            <div className="mb-2 text-md text-gray-700 dark:text-gray-400">{props.description}</div>
                         </div>
                         <button
                             className="rounded bg-blue-500 hover:bg-blue-600 dark:bg-blue-400 dark:hover:bg-blue-300 text-white dark:text-black w-24 text-sm py-1"
